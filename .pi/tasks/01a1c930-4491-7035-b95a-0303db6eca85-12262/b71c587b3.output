@@ -1,0 +1,43 @@
+
+> pi-model-discoverer@0.1.0 test
+> tsx --test test/*.test.ts
+
+✔ configuration validates defaults and rejects unsafe or credential-bearing inputs (0.786458ms)
+✔ normalization deduplicates, preserves explicit metadata, and uses conservative defaults (0.367708ms)
+✔ discovery sends saved key only to the configured origin with redirects blocked (9.676333ms)
+✔ Anthropic catalogs use x-api-key and paginate without following server URLs (0.425041ms)
+✔ failures never expose response bodies, URLs, or credential-bearing errors (6.487542ms)
+✔ cancellation does not issue a request (0.1895ms)
+✔ native Pi login, refresh, failure retention, and logout work without credential-file access (1.424333ms)
+✔ offline refresh and rejected publication do not replace in-memory catalogs (0.297958ms)
+✖ Pi's actual extension loader registers the command and custom provider without auth files (136.837834ms)
+✔ native discovery delegates to Pi, selecting only authenticated dynamic providers (1.061667ms)
+✔ explicit unknown and unauthenticated providers do not cause a refresh (0.114541ms)
+✔ refresh reports per-provider failures without leaking native auth errors (0.130458ms)
+✔ cancelled refresh is not reported as successful (0.092375ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 12
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 973.519
+
+✖ failing tests:
+
+test at test/loader.test.ts:8:1
+✖ Pi's actual extension loader registers the command and custom provider without auth files (136.837834ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (/Users/rkabaev/Desktop/pi-model-discoverer/test/loader.test.ts:23:12)
+      at async Test.run (node:internal/test_runner/test:1069:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:332:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual'
+  }

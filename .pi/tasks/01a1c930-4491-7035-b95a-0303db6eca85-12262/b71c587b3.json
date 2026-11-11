@@ -1,0 +1,29 @@
+{
+  "id": "b71c587b3",
+  "name": "Verify loader integration",
+  "command": "npm test && npm run typecheck",
+  "status": "failed",
+  "outputPath": ".pi/tasks/01a1c930-4491-7035-b95a-0303db6eca85-12262/b71c587b3.output",
+  "cwd": "/Users/rkabaev/Desktop/pi-model-discoverer",
+  "startTime": 1794377782893,
+  "endTime": 1794377784178,
+  "exitCode": 1,
+  "signal": null,
+  "pid": 29609,
+  "bytesWritten": 1986,
+  "isAgent": false,
+  "surviveReload": false,
+  "error": "Exited with code 1",
+  "notified": true,
+  "notifyOnCompletion": true,
+  "triggerOnCompletion": true,
+  "timeoutSeconds": 180,
+  "shellPolicy": {
+    "policy": "inherit",
+    "executable": "/bin/zsh",
+    "argvPrefix": [
+      "-c"
+    ],
+    "dialect": "posix"
+  }
+}

@@ -1,0 +1,28 @@
+
+> pi-model-discoverer@0.1.0 test
+> tsx --test test/*.test.ts
+
+✔ configuration validates defaults and rejects unsafe or credential-bearing inputs (0.936083ms)
+✔ normalization deduplicates, preserves explicit metadata, and uses conservative defaults (0.465667ms)
+✔ discovery sends saved key only to the configured origin with redirects blocked (11.164708ms)
+✔ Anthropic catalogs use x-api-key and paginate without following server URLs (0.521542ms)
+✔ failures never expose response bodies, URLs, or credential-bearing errors (7.850917ms)
+✔ cancellation does not issue a request (0.279833ms)
+✔ native Pi login, refresh, failure retention, and logout work without credential-file access (2.657208ms)
+✔ offline refresh and rejected publication do not replace in-memory catalogs (0.313958ms)
+✔ native discovery delegates to Pi, selecting only authenticated dynamic providers (1.299792ms)
+✔ explicit unknown and unauthenticated providers do not cause a refresh (0.181542ms)
+✔ refresh reports per-provider failures without leaking native auth errors (0.25375ms)
+✔ cancelled refresh is not reported as successful (0.146125ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 769.430208
+
+> pi-model-discoverer@0.1.0 typecheck
+> tsc --noEmit
+

@@ -1,0 +1,51 @@
+
+> pi-model-discoverer@0.1.0 test
+> tsx --test test/*.test.ts
+
+✖ models.json parsing honors discoverModels opt-in, comments, and trailing commas (1.5555ms)
+✔ normalization deduplicates, preserves explicit metadata, modelApis, and conservative defaults (0.360708ms)
+✔ discovery sends the resolved credential only to the configured origin with redirects blocked (12.653375ms)
+✔ Anthropic catalogs use x-api-key and paginate without following server URLs (0.6605ms)
+✔ failures never expose response bodies, URLs, or credential-bearing errors (8.316417ms)
+✔ malformed saved keys cannot escape through header validation errors (0.597166ms)
+✔ cancellation does not issue a request (0.175958ms)
+✔ refresh hook restores persisted catalogs offline and persists new ones after fetch (0.917042ms)
+✔ Pi's actual extension loader registers the command and discovery hook from models.json (115.550875ms)
+✔ loader tolerates a missing models.json (5.570375ms)
+✔ native discovery delegates to Pi, selecting only authenticated dynamic providers (1.254291ms)
+✔ session-start refresh does not force a network fetch (0.113167ms)
+✔ explicit unknown and unauthenticated providers do not cause a refresh (0.082459ms)
+✔ refresh reports per-provider failures without leaking native auth errors (0.301334ms)
+✔ cancelled refresh is not reported as successful (0.206541ms)
+✔ a silently superseded refresh does not claim that new models were published (0.154667ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 15
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 952.222541
+
+✖ failing tests:
+
+test at test/discovery.test.ts:16:1
+✖ models.json parsing honors discoverModels opt-in, comments, and trailing commas (1.5555ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{ "url": "https://x//y" }'
+  - '{ "url": "https://x//y", }'
+                            ^
+  
+      at TestContext.<anonymous> (/Users/rkabaev/Desktop/pi-model-discoverer/test/discovery.test.ts:45:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1062:25)
+      at Test.start (node:internal/test_runner/test:959:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:332:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{ "url": "https://x//y" }',
+    expected: '{ "url": "https://x//y", }',
+    operator: 'strictEqual'
+  }

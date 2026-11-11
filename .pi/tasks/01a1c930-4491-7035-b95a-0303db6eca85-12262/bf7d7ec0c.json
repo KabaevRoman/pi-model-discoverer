@@ -1,0 +1,28 @@
+{
+  "id": "bf7d7ec0c",
+  "name": "Full verification after rework",
+  "command": "npm test && npm run typecheck && npm pack --dry-run --ignore-scripts",
+  "status": "failed",
+  "outputPath": ".pi/tasks/01a1c930-4491-7035-b95a-0303db6eca85-12262/bf7d7ec0c.output",
+  "cwd": "/Users/rkabaev/Desktop/pi-model-discoverer",
+  "startTime": 1794379272531,
+  "endTime": 1794379273915,
+  "exitCode": 1,
+  "signal": null,
+  "pid": 58328,
+  "bytesWritten": 2466,
+  "isAgent": false,
+  "surviveReload": false,
+  "error": "Exited with code 1",
+  "notified": true,
+  "notifyOnCompletion": true,
+  "triggerOnCompletion": true,
+  "shellPolicy": {
+    "policy": "inherit",
+    "executable": "/bin/zsh",
+    "argvPrefix": [
+      "-c"
+    ],
+    "dialect": "posix"
+  }
+}

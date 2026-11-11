@@ -1,0 +1,10 @@
+{
+  "mcp": {
+    "servers": {
+      "mws-confluence": {
+        "type": "remote",
+        "url": "https://gateway.ai.mws-team.ru/mcp/confluence"
+      }
+    }
+  }
+}

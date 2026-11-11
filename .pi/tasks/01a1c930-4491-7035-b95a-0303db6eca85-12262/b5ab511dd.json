@@ -1,0 +1,28 @@
+{
+  "id": "b5ab511dd",
+  "name": "Install development dependencies",
+  "command": "npm install --ignore-scripts",
+  "status": "completed",
+  "outputPath": ".pi/tasks/01a1c930-4491-7035-b95a-0303db6eca85-12262/b5ab511dd.output",
+  "cwd": "/Users/rkabaev/Desktop/pi-model-discoverer",
+  "startTime": 1794377344745,
+  "endTime": 1794377352635,
+  "exitCode": 0,
+  "signal": null,
+  "pid": 21344,
+  "bytesWritten": 235,
+  "isAgent": false,
+  "surviveReload": false,
+  "notified": true,
+  "notifyOnCompletion": true,
+  "triggerOnCompletion": true,
+  "timeoutSeconds": 180,
+  "shellPolicy": {
+    "policy": "inherit",
+    "executable": "/bin/zsh",
+    "argvPrefix": [
+      "-c"
+    ],
+    "dialect": "posix"
+  }
+}

@@ -1,0 +1,53 @@
+
+> pi-model-discoverer@0.1.0 test
+> tsx --test test/*.test.ts
+
+✔ configuration validates defaults and rejects unsafe or credential-bearing inputs (0.787333ms)
+✔ normalization deduplicates, preserves explicit metadata, and uses conservative defaults (0.374625ms)
+✔ discovery sends saved key only to the configured origin with redirects blocked (10.979875ms)
+✔ Anthropic catalogs use x-api-key and paginate without following server URLs (0.442459ms)
+✔ failures never expose response bodies, URLs, or credential-bearing errors (6.92225ms)
+✔ malformed saved keys cannot escape through header validation errors (0.663167ms)
+✔ cancellation does not issue a request (0.232542ms)
+✔ native Pi login, refresh, failure retention, and logout work without credential-file access (1.8475ms)
+✔ offline refresh and rejected publication do not replace in-memory catalogs (0.439917ms)
+✔ Pi's actual extension loader registers the command and custom provider without auth files (116.034416ms)
+✔ native discovery delegates to Pi, selecting only authenticated dynamic providers (0.846541ms)
+✔ explicit unknown and unauthenticated providers do not cause a refresh (0.088084ms)
+✔ refresh reports per-provider failures without leaking native auth errors (0.112167ms)
+✔ cancelled refresh is not reported as successful (0.071958ms)
+✔ a silently superseded refresh does not claim that new models were published (0.090792ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 918.618458
+
+> pi-model-discoverer@0.1.0 typecheck
+> tsc --noEmit
+
+npm notice
+npm notice 📦  pi-model-discoverer@0.1.0
+npm notice Tarball Contents
+npm notice 5.9kB README.md
+npm notice 237B model-discoverer.example.json
+npm notice 720B package.json
+npm notice 2.9kB src/config.ts
+npm notice 5.2kB src/discovery.ts
+npm notice 2.5kB src/index.ts
+npm notice 1.3kB src/provider.ts
+npm notice 2.1kB src/refresh.ts
+npm notice Tarball Details
+npm notice name: pi-model-discoverer
+npm notice version: 0.1.0
+npm notice filename: pi-model-discoverer-0.1.0.tgz
+npm notice package size: 7.6 kB
+npm notice unpacked size: 20.9 kB
+npm notice shasum: f16229822d27f6e01194bf427ca751426368bbfb
+npm notice integrity: sha512-/wR7re/7dXDdz[...]8OLfJYAW6HlZg==
+npm notice total files: 8
+npm notice
+pi-model-discoverer-0.1.0.tgz

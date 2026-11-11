@@ -1,0 +1,28 @@
+{
+  "id": "b052f181b",
+  "name": "Run tests and typecheck",
+  "command": "npm test && npm run typecheck",
+  "status": "completed",
+  "outputPath": ".pi/tasks/01a1c930-4491-7035-b95a-0303db6eca85-12262/b052f181b.output",
+  "cwd": "/Users/rkabaev/Desktop/pi-model-discoverer",
+  "startTime": 1794377662736,
+  "endTime": 1794377666405,
+  "exitCode": 0,
+  "signal": null,
+  "pid": 27563,
+  "bytesWritten": 1314,
+  "isAgent": false,
+  "surviveReload": false,
+  "notified": true,
+  "notifyOnCompletion": true,
+  "triggerOnCompletion": true,
+  "timeoutSeconds": 180,
+  "shellPolicy": {
+    "policy": "inherit",
+    "executable": "/bin/zsh",
+    "argvPrefix": [
+      "-c"
+    ],
+    "dialect": "posix"
+  }
+}

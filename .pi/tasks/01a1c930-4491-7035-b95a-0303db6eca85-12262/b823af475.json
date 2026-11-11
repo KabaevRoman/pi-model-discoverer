@@ -1,0 +1,28 @@
+{
+  "id": "b823af475",
+  "name": "Test models.json discovery rework",
+  "command": "npm test && npm run typecheck",
+  "status": "failed",
+  "outputPath": ".pi/tasks/01a1c930-4491-7035-b95a-0303db6eca85-12262/b823af475.output",
+  "cwd": "/Users/rkabaev/Desktop/pi-model-discoverer",
+  "startTime": 1794379174480,
+  "endTime": 1794379176434,
+  "exitCode": 1,
+  "signal": null,
+  "pid": 55838,
+  "bytesWritten": 2848,
+  "isAgent": false,
+  "surviveReload": false,
+  "error": "Exited with code 1",
+  "notified": true,
+  "notifyOnCompletion": true,
+  "triggerOnCompletion": true,
+  "shellPolicy": {
+    "policy": "inherit",
+    "executable": "/bin/zsh",
+    "argvPrefix": [
+      "-c"
+    ],
+    "dialect": "posix"
+  }
+}
