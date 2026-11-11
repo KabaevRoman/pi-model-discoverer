@@ -1,0 +1,29 @@
+{
+  "id": "be8071499",
+  "name": "Retry npm publication",
+  "command": "npm publish --access public",
+  "status": "failed",
+  "outputPath": ".pi/tasks/01a1cbf0-cf1a-72a5-b330-6810f62280f2-48292/be8071499.output",
+  "cwd": "/Users/rkabaev/Desktop/pi-model-discoverer",
+  "startTime": 1794424517057,
+  "endTime": 1794424521684,
+  "exitCode": 1,
+  "signal": null,
+  "pid": 50340,
+  "bytesWritten": 3410,
+  "isAgent": false,
+  "surviveReload": false,
+  "error": "Exited with code 1",
+  "notified": true,
+  "notifyOnCompletion": true,
+  "triggerOnCompletion": true,
+  "timeoutSeconds": 120,
+  "shellPolicy": {
+    "policy": "inherit",
+    "executable": "/bin/zsh",
+    "argvPrefix": [
+      "-c"
+    ],
+    "dialect": "posix"
+  }
+}

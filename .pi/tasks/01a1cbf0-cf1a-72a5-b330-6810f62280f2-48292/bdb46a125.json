@@ -1,0 +1,28 @@
+{
+  "id": "bdb46a125",
+  "name": "Check release metadata",
+  "command": "npm run typecheck && npm publish --dry-run --access public --ignore-scripts && git diff --check",
+  "status": "completed",
+  "outputPath": ".pi/tasks/01a1cbf0-cf1a-72a5-b330-6810f62280f2-48292/bdb46a125.output",
+  "cwd": "/Users/rkabaev/Desktop/pi-model-discoverer",
+  "startTime": 1794423201036,
+  "endTime": 1794423204535,
+  "exitCode": 0,
+  "signal": null,
+  "pid": 49330,
+  "bytesWritten": 1028,
+  "isAgent": false,
+  "surviveReload": false,
+  "notified": true,
+  "notifyOnCompletion": true,
+  "triggerOnCompletion": true,
+  "timeoutSeconds": 60,
+  "shellPolicy": {
+    "policy": "inherit",
+    "executable": "/bin/zsh",
+    "argvPrefix": [
+      "-c"
+    ],
+    "dialect": "posix"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "bc1451790",
+  "name": "Repair and verify release",
+  "command": "set -eu\nrepair_dir=$(mktemp -d \"$TMPDIR/esbuild-repair.XXXXXX\")\nnpm pack @esbuild/darwin-arm64@0.28.2 --pack-destination \"$repair_dir\"\ntar -xzf \"$repair_dir/esbuild-darwin-arm64-0.28.2.tgz\" -C \"$repair_dir\"\nrm node_modules/@esbuild/darwin-arm64/bin/esbuild\ncp \"$repair_dir/package/bin/esbuild\" node_modules/@esbuild/darwin-arm64/bin/esbuild\nchmod +x node_modules/@esbuild/darwin-arm64/bin/esbuild\nnode_modules/@esbuild/darwin-arm64/bin/esbuild --version\nnpm test\nnpm run typecheck\ngit diff --check",
+  "status": "completed",
+  "outputPath": ".pi/tasks/01a1cbf0-cf1a-72a5-b330-6810f62280f2-48292/bc1451790.output",
+  "cwd": "/Users/rkabaev/Desktop/pi-model-discoverer",
+  "startTime": 1794424295797,
+  "endTime": 1794424306376,
+  "exitCode": 0,
+  "signal": null,
+  "pid": 49813,
+  "bytesWritten": 2649,
+  "isAgent": false,
+  "surviveReload": false,
+  "notified": true,
+  "notifyOnCompletion": true,
+  "triggerOnCompletion": true,
+  "timeoutSeconds": 120,
+  "shellPolicy": {
+    "policy": "inherit",
+    "executable": "/bin/zsh",
+    "argvPrefix": [
+      "-c"
+    ],
+    "dialect": "posix"
+  }
+}

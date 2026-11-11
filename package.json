@@ -3,13 +3,20 @@
   "version": "0.1.0",
   "description": "Discover models using Pi's existing /login credentials",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KabaevRoman/pi-model-discoverer.git"
+  },
+  "homepage": "https://github.com/KabaevRoman/pi-model-discoverer#readme",
+  "bugs": "https://github.com/KabaevRoman/pi-model-discoverer/issues",
   "keywords": ["pi-package"],
   "files": ["src", "README.md"],
   "pi": { "extensions": ["./src/index.ts"] },
   "engines": { "node": ">=22" },
   "scripts": {
     "test": "tsx --test test/*.test.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm test && npm run typecheck"
   },
   "peerDependencies": {
     "@earendil-works/pi-ai": "*",

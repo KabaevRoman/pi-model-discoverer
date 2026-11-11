@@ -4,13 +4,14 @@ A Pi extension that discovers and refreshes model catalogs using authentication 
 
 ## Install
 
-From this directory:
+Install from npm (requires Earendil Pi 1.5.2+):
 
 ```sh
-pi install .
+pi install npm:pi-model-discoverer
 ```
 
-Restart Pi or run `/reload`. For a one-off trial, use `pi -e ./src/index.ts`.
+Restart Pi or run `/reload`. For a one-off trial, use `pi -e npm:pi-model-discoverer`.
+For local development, run `pi install .` from this directory.
 
 ```text
 /discover-models
@@ -82,4 +83,13 @@ npm run typecheck
 
 Tests use mocked HTTP and temporary config directories; they do not access your saved credentials or make real authenticated provider requests.
 
-To remove the extension, run `pi remove /absolute/path/to/pi-model-discoverer` (use the source shown by `pi list`) and reload. `models.json` entries and `/login` credentials are left untouched; delete any `discoverModels` keys you no longer want honored.
+## Publishing
+
+```sh
+npm login
+npm publish --access public
+```
+
+Publishing runs tests and type checking automatically. To inspect the files that will be uploaded, run `npm pack --dry-run`. For subsequent releases, bump the version before publishing; npm does not allow overwriting a published version.
+
+To remove the npm-installed extension, run `pi remove npm:pi-model-discoverer` (for local installs, use the source shown by `pi list`) and reload. `models.json` entries and `/login` credentials are left untouched; delete any `discoverModels` keys you no longer want honored.
